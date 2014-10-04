@@ -1,0 +1,63 @@
+@mixin font-face($style-name, $file, $family, $category:"") {
+    $filepath: "fonts/" + $family + "/" + $file;
+    @font-face {
+        font-family: "#{$style-name}";
+        src: url($filepath + ".eot");
+        src: url($filepath + ".eot?#iefix") format('embedded-opentype'), url($filepath + ".woff") format('woff'), url($filepath + ".ttf")  format('truetype'), url($filepath + ".svg#" + $style-name + "") format('svg');
+    }
+    %#{$style-name} {
+        font: {
+            @if $category != "" {
+                family: "#{$style-name}", #{$category};
+            }
+            @else {
+                family: "#{$style-name}";
+                weight: normal;
+            }
+        }
+    }
+};
+
+@include font-face('Encode Sans Narrow', 'encodesansnarrow-400-regular-webfont','Encode', 'sans-serif');
+
+*{
+}
+
+li{
+	list-style-type:none;
+};
+
+a{
+	text-decoration:none;
+};
+
+.header{
+	height:300px;
+	background-color:#eee;
+	img{
+		display:block;
+		background:url('img/profile.jpg') no-repeat center;
+		border:5px solid #FFC125;
+		border-radius:50%;
+		width:200px;
+		height:200px;
+		margin:75px auto;
+		margin-bottom:10px;
+	};
+	h1{
+		display:block;
+		margin:0 auto;
+		text-align:center;
+	};
+};
+
+.about{
+	height:300px;
+	background:#1B1B1B;
+	p{
+		font-color:white;
+	};
+};
+
+
+
