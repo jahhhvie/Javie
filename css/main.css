@@ -72,7 +72,6 @@ a:visited {
     display: inline-block;
     height: 300px;
     width: 300px;
-    background-color: black;
     margin: 5px;
     flex-grow: 1; }
   .port a p {
@@ -82,5 +81,8 @@ a:visited {
     vertical-align: bottoma; }
   .port a:hover {
     transform: scale(1.05, 1.05);
-    transition-duration: 2s;
+    transition-duration: 1s;
     -webkit-transition-timing-function: ease-out; }
+  .port .one {
+    background: url("../img/mac.jpg") center center no-repeat;
+    display: block; }
