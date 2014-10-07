@@ -102,6 +102,7 @@ a:visited{
 		height:400px;
 	};
 	a{
+		position:relative;
 		display:inline-block;
 		height:350px;
 		width:300px;
@@ -110,7 +111,7 @@ a:visited{
 		border: 3px solid #FFC125;
 		color:white;
 	};
-	a p{
+	a span{
 		color:white;
 		background:rgba(33, 32, 32, 0.7);
  		margin: 0 auto;
